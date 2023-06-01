@@ -1,6 +1,6 @@
 # Comandos para iniciar app
  
-Para instalar node_modules
+Para instalar node_modules<br>
 1- npm install 
 
 Instalar el paquete para manejar las rutas <br>
