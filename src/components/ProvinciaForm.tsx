@@ -19,7 +19,7 @@ const ProvinciaForm: React.FC<Props> = ({ provincia, onSubmit, onCancel }) => {
         abreviatura: '',
         bandera: '',
     });
-    
+
     const [imageUrl, setImageUrl] = useState('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,15 +51,15 @@ const ProvinciaForm: React.FC<Props> = ({ provincia, onSubmit, onCancel }) => {
             </Form.Group>
             <Form.Group controlId="formPoblacion">
                 <Form.Label>Poblacion</Form.Label>
-                <Form.Control type="text" name="poblacion" value={formProvincia.poblacion} onChange={handleChange} required />
+                <Form.Control type="number" name="poblacion" value={formProvincia.poblacion} onChange={handleChange} required />
             </Form.Group>
             <Form.Group controlId="formSuperficie">
                 <Form.Label>Superficie</Form.Label>
-                <Form.Control type="text" name="superficie" value={formProvincia.superficie} onChange={handleChange} required />
+                <Form.Control type="number" name="superficie" value={formProvincia.superficie} onChange={handleChange} required />
             </Form.Group>
             <Form.Group controlId="formNroDepartamentos">
                 <Form.Label>Numero de Departamentos</Form.Label>
-                <Form.Control type="text" name="nroDepartamentos" value={formProvincia.nroDepartamentos} onChange={handleChange} required />
+                <Form.Control type="number" name="nroDepartamentos" value={formProvincia.nroDepartamentos} onChange={handleChange} required />
             </Form.Group>
             <Form.Group controlId="formAbreviatura">
                 <Form.Label>Abreviatura</Form.Label>
@@ -76,10 +76,10 @@ const ProvinciaForm: React.FC<Props> = ({ provincia, onSubmit, onCancel }) => {
                 />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" className="mt-3">
                 Guardar
             </Button>
-            <Button variant="secondary" onClick={onCancel}>
+            <Button variant="secondary" onClick={onCancel} className="mt-3">
                 Cancelar
             </Button>
 

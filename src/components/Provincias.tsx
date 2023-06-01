@@ -6,10 +6,6 @@ import { Modal } from "react-bootstrap";
 import ProvinciaForm from "./ProvinciaForm";
 import { Link } from "react-router-dom";
 
-interface Props {
-    provincia: Provincia;
-}
-
 const Provincias: React.FC = () => {
     const [provincias, setProvincias] = useState<Provincia[]>([]);
     const [selectedProvincia, setSelectedProvincia] = useState<Provincia | null>(null);
@@ -60,7 +56,7 @@ const Provincias: React.FC = () => {
         if (provincia.id === 0) {
             await axios.post('http://168.194.207.98:8081/api_provincia/post_provincia.php', provincia);
         } else {
-            await axios.put(`http://168.194.207.98:8081/api_provincia/${provincia.id}`, provincia);
+            await axios.put(`http://168.194.207.98:8081/api_provincia/put_provincia.php`, provincia);
         }
         setIsFormOpen(false);
         fetchProvincias();
