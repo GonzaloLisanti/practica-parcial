@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Provincia } from "../types/Provincia";
+import { Provincia } from "../types/Agenda";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
 

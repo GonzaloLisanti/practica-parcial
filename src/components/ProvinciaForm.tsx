@@ -1,4 +1,4 @@
-import { Provincia } from "../types/Provincia";
+import { Provincia } from "../types/Agenda";
 import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 

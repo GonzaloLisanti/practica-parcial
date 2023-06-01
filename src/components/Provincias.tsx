@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Provincia } from "../types/Provincia";
+import { Provincia } from "../types/Agenda";
 import axios from "axios";
 import GenericTable from "./GenericTable";
 import { Modal } from "react-bootstrap";
