@@ -12,5 +12,5 @@ Instalar el paquete para los tipos de referencia a rutas<br>
 Estilo con Bootstrap<br>
 4- npm install react-bootstrap bootstrap<br>
 
-Instalar Axios
+Instalar Axios<br>
 5- npm install axios
