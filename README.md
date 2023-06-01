@@ -1,7 +1,7 @@
 # Comandos para iniciar app
  
-Para instalar node_modules<br>
-1- npm install 
+Para crear proyecto de react<br>
+1- npx create-react-app app-inicial --template typescript
 
 Instalar el paquete para manejar las rutas <br>
 2- npm install react-router-dom<br>
