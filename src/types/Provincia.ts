@@ -1,10 +1,8 @@
-export interface Provincia {
+export interface Agenda {
   id: number;
+  fotourl: string;
+  apellido: string;
   nombre: string;
-  capital: string;
-  poblacion: number;
-  superficie: number;
-  nroDepartamentos: number;
-  abreviatura: string;
-  bandera: string;
+  telefono: number;
+  email: string;
 }
