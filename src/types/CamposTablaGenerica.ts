@@ -2,6 +2,7 @@ export interface Column {
     title: string;
     field: string;
     width?: number;
+    render?: (row: any) => JSX.Element;
   }
   
   export interface Action {

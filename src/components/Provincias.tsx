@@ -14,7 +14,14 @@ const Provincias: React.FC = () => {
     const columns = [
         { title: 'Provincia', field: 'nombre' },
         { title: 'Abreviatura', field: 'abreviatura' },
-        { title: 'Bandera', field: 'bandera' },
+        {
+            title: 'Bandera',
+            field: 'bandera',
+            render: (row: Provincia) => (
+                <img src={row.bandera} alt={row.nombre} className="img-fluid w-50" />
+            ),
+        },
+
     ];
 
     const actions = {
@@ -31,11 +38,17 @@ const Provincias: React.FC = () => {
     const fetchProvincias = async () => {
         try {
             const response = await axios.get('http://168.194.207.98:8081/api_provincia/get_provincias.php');
-            setProvincias(response.data);
+            const provinciasData = response.data.map((provincia: Provincia) => {
+                return {
+                    ...provincia
+                };
+            });
+            setProvincias(provinciasData);
         } catch (error) {
             console.error(error);
         }
     };
+
 
     const handleAdd = () => {
         setSelectedProvincia(null);
