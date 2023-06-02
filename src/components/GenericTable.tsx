@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Table, InputGroup, FormControl, Container, Row, Col } from 'react-bootstrap';
 import { TableProps } from '../types/CamposTablaGenerica';
-import { Link } from 'react-router-dom';
 
 
 const GenericTable: React.FC<TableProps> = ({ data, columns, actions, onAdd, onUpdate, onDelete }) => {
@@ -54,7 +53,9 @@ const GenericTable: React.FC<TableProps> = ({ data, columns, actions, onAdd, onU
                     {filteredData.map((item, index) => (
                         <tr key={index}>
                             {columns.map((column, key) => (
-                                <td key={key}>{item[column.field]}</td>
+                                <td key={key}>
+                                    {column.render ? column.render(item) : item[column.field]}
+                                </td>
                             ))}
                             <td>
                                 {actions.update && (
