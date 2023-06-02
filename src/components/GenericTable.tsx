@@ -10,11 +10,6 @@ const GenericTable: React.FC<TableProps> = ({ data, columns, actions, onAdd, onU
         setSearch(e.target.value);
     };
 
-    const handleVerDetalles = (id: number) => {
-        window.location.href = `/provincias/${id}`;
-    };
-
-
     const filteredData = data.filter(item =>
         columns.some(column =>
             item[column.field].toString().toLowerCase().includes(search.toLowerCase())
